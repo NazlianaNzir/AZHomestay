@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peraturan | Az Homestay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #fefbe9;
+      color: #eab308;
+      overflow-x: hidden;
+    }
+    nav a { transition: color 0.3s ease; }
+    nav a:hover { color: #eab308; }
+
+    .rule-card {
+      background: #fff7cc;
+      border-left:5px solid black;
+      border-radius:20px;
+      padding:40px 30px;
+      min-height:220px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .rule-card:hover {
+      transform:translateY(-12px) scale(1.02);
+      background:rgba(255,255,255,0.12);
+    }
+
+    .rules-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px 30px;
+      margin-top: 100px;
+    }
+
+    .combined-box {
+      background-color: #fff7cc;
+      border-radius: 20px;
+      padding: 0;
+      margin-top: 70px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: all 0.4s ease-in-out; 
+    }
+
+    .combined-box:hover {
+      transform: translateY(-12px) scale(1.02); 
+      box-shadow: 0 12px 36px rgba(0,0,0,0.5); 
+    }
+
+    .combined-box img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      .combined-box img {
+        height: 250px;
+      }
+    }
+
+    .combined-box-content {
+      padding:25px;
+    }
+
+    .mark {
+    background-color: #fecaca;
+    color: #b91c1c;
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+
+
+  </style>
+</head>
+<body class="font-sans text-gray-900 bg-gray-50">
+
+  <header class="fixed top-0 w-full bg-white shadow z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-yellow-500">AZ Homestay</h1>
+      <nav class="space-x-5 font-medium">
+        <a href="#">Laman Utama</a>
+        <a href="#">Apartment Kami</a>
+        <a href="#">Galeri</a>
+        <a href="#">Tarikan Berdekatan</a>
+        <a href="#">Hubungi</a>
+        <a href="#" class="text-yellow-500 font-semibold">Peraturan</a>
+        <a href="#">Soalan Lazim</a>
+        <a href="#">Review</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="rules max-w-6xl mx-auto px-4">
+    <h2 class=" text-center text-3xl font-bold text-yellow-500 uppercase tracking-wide mt-32 mb-12">Peraturan AZ Homestay</h2>
+
+    <div class="rules-grid">
+      <div class="rule-card">
+        <div class="text-4xl text-center mb-4">🚭</div>
+        <div class="text-xl font-bold text-center text-2xl font-bold text-yellow-800 mb-4">Jangan Merokok Dalam Rumah</div>
+        <p class="text-gray-800 text-center">Merokok dibenarkan di luar sahaja.</p>
+      </div>
+      <div class="rule-card">
+        <div class="text-4xl text-center mb-4">⏰</div>
+        <div class="text-xl font-bold text-center text-2xl font-bold text-yellow-800 mb-4">Check‑in & Check‑out</div>
+        <p class="text-gray-800 text-center">Check-in dan check-out tepat masa.</p>
+      </div>
+      <div class="rule-card">
+        <div class="text-4xl text-center mb-4">🔇</div>
+        <div class="text-xl font-bold text-center text-2xl font-bold text-yellow-800 mb-4">Waktu Senyap</div>
+        <p class="text-gray-800 text-center">11 PM – 7AM: Hormati orang lain.</p>
+      </div>
+      <div class="rule-card">
+        <div class="text-4xl text-center mb-4">🌊</div>
+        <div class="text-xl font-bold text-center text-2xl font-bold text-yellow-800 mb-4">Guna kolam ikut masa</div>
+        <p class="text-gray-800 text-center">Wajib awasi kanak-kanak.</p>
+      </div>
+      <div class="rule-card">
+        <div class="text-4xl text-center mb-4">👜</div>
+        <div class="text-xl font-bold text-center text-2xl font-bold text-yellow-800 mb-4">Jaga barang peribadi anda</div>
+        <p class="text-gray-800 text-center">Awasi 24 jam.</p>
+      </div>
+      <div class="rule-card">
+        <div class="text-4xl text-center mb-4">🧼</div>
+        <div class="text-xl font-bold text-center text-2xl font-bold text-yellow-800 mb-4">Tolong Jaga Kebersihan</div>
+        <p class="text-gray-800 text-center">Tinggalkan homestay bersih.</p>
+      </div>
+      <div class="rule-card">
+        <div class="text-4xl text-center mb-4">🐾</div>
+        <div class="text-xl font-bold text-center text-2xl font-bold text-yellow-800 mb-4">Dilarang membawa haiwan peliharaan</div>
+        <p class="text-gray-800 text-center">Tiada haiwan peliharaan dibenarkan.</p>
+      </div>
+      <div class="rule-card">
+        <div class="text-4xl text-center mb-4">👃</div>
+        <div class="text-xl font-bold text-center text-2xl font-bold text-yellow-800 mb-4">Dilarang membawa durian</div>
+        <p class="text-gray-800 text-center">Durian & Manggis dilarang.</p>
+      </div>
+    </div>
+
+
+    <div class="combined-box mt-16">
+      <img src="image/p1.jpg" alt="Gambar 1">
+      <div class="combined-box-content">
+        <h3 class="text-2xl font-bold text-yellow-800 mb-4">⚠️ Peringatan Khas ⚠️</h3>
+        <ul class="list-disc list-inside text-sm text-gray-800 space-y-2">
+          <li>Pastikan semua <mark class="mark">suis dimatikan</mark> sebelum keluar.</li>
+          <li>Sebarang kerosakan akan ditolak dari <mark class="mark">deposit.</mark></li>
+          <li>Pihak pengurusan berhak <mark class="mark">menolak tempahan</mark> jika peraturan diabaikan.</li>
+          <li><mark class="mark">Dilarang</mark> memindahkan perabot tanpa kebenaran.</li>
+          <li>Jangan sesekali tinggalkan <mark class="mark">air paip</mark> terbuka.</li>
+          <li>Elakkan menggunakan <mark class="mark">bahan mudah terbakar</mark> dalam homestay.</li>
+          <li>Caj tambahan dikenakan jika kunci <mark class="mark">hilang atau rosak.</mark></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+      <h2 class="text-center text-3xl font-bold text-red-900 uppercase tracking-wide mt-20 mb-12">Pihak pengurusan tidak akan bertanggungjawab ke atas 
+        <br>sebarang kehilangan harta benda dan kemalangan yang berlaku.</br></h2>
+ 
+
+  <footer class="bg-yellow-400 text-black py-6 mt-12 text-center text-sm font-semibold shadow-inner">
+    Copyright © 2025 - Nureen Fatini Afriena Binti Nor Azwan. All Rights Reserved. 
+  </footer>  
+
+</body>
+</html>
