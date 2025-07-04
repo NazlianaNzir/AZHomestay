@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review - AZ Homestay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    nav a {
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #eab308;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-900 bg-gray-50">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white shadow z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-yellow-500">AZ Homestay</h1>
+      <nav class="space-x-5 font-medium">
+        <a href="index.html">Laman Utama</a>
+        <a href="apartment_kami.html">Apartment Kami</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="tarikan_berdekatan.html">Tarikan Berdekatan</a>
+        <a href="hubungi.html">Hubungi</a>
+        <a href="peraturan.html">Peraturan</a>
+        <a href="soalan_lazim.html">Soalan Lazim</a>
+        <a href="review.html" class="text-yellow-500 font-semibold">Review</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-28 pb-24 px-4 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-yellow-500 mb-12">Ulasan Tetamu Kami</h2>
+
+    <!-- Review Cards -->
+    <section id="reviewList" class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-2xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
+        <p class="text-gray-700 italic">"Homestay sangat bersih dan selesa. Tuan rumah mesra dan membantu. Lokasi pun strategik!"</p>
+        <div class="text-yellow-500 mt-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+        <p class="text-yellow-600 font-semibold mt-1">- Nurul, Terengganu</p>
+      </div>
+
+      <div class="bg-yellow-50 rounded-2xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
+        <p class="text-gray-700 italic">"Saya sangat berpuas hati! Semua fasiliti lengkap. Terima kasih AZ Homestay!"</p>
+        <div class="text-yellow-500 mt-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="text-yellow-600 font-semibold mt-1">- Aiman, Kelantan</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
+        <p class="text-gray-700 italic">"Sesuai untuk keluarga besar. Anak-anak pun suka. Akan datang lagi!"</p>
+        <div class="text-yellow-500 mt-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+        <p class="text-yellow-600 font-semibold mt-1">- Farah, Kuala Lumpur</p>
+      </div>
+
+      <div class="bg-yellow-50 rounded-2xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
+        <p class="text-gray-700 italic">"Gambar sama seperti di website. Memang puas hati! Highly recommended."</p>
+        <div class="text-yellow-500 mt-2">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text-yellow-600 font-semibold mt-1">- Syafiq, Johor</p>
+      </div>
+    </section>
+
+    <!-- Review Form -->
+    <div class="mt-16 bg-white p-6 rounded-xl shadow-md max-w-2xl mx-auto">
+      <h3 class="text-2xl font-semibold text-yellow-500 mb-4 text-center">Tinggalkan Ulasan Anda</h3>
+      <form id="reviewForm" class="space-y-4">
+        <input type="text" id="name" placeholder="Nama Anda" required class="w-full border px-4 py-2 rounded">
+        <textarea id="message" rows="3" placeholder="Ulasan anda..." required class="w-full border px-4 py-2 rounded"></textarea>
+        <select id="rating" class="w-full border px-4 py-2 rounded">
+          <option value="5">★★★★★ - Terbaik</option>
+          <option value="4">★★★★☆ - Sangat Baik</option>
+          <option value="3">★★★☆☆ - Boleh tahan</option>
+          <option value="2">★★☆☆☆ - Kurang memuaskan</option>
+          <option value="1">★☆☆☆☆ - Tak puas hati</option>
+        </select>
+        <button type="submit" class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition">Hantar Ulasan</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-4 text-center text-sm text-gray-600">
+    &copy; 2025 AZ Homestay | Made by Muhammad Fareez Ilham.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('reviewForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const msg = document.getElementById('message').value;
+      const rating = parseInt(document.getElementById('rating').value);
+
+      let stars = '';
+      for (let i = 0; i < 5; i++) {
+        stars += i < rating ? '<i class="fas fa-star text-yellow-500"></i>' : '<i class="far fa-star text-yellow-500"></i>';
+      }
+
+      const newReview = `
+        <div class="bg-white rounded-2xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
+          <p class="text-gray-700 italic">"${msg}"</p>
+          <div class="mt-2">${stars}</div>
+          <p class="text-yellow-600 font-semibold mt-1">- ${name}</p>
+        </div>
+      `;
+
+      document.getElementById('reviewList').insertAdjacentHTML('beforeend', newReview);
+      this.reset();
+      alert("Terima kasih atas ulasan anda!");
+    });
+  </script>
+
+</body>
+</html>
