@@ -81,12 +81,20 @@
     border-radius: 4px;
   }
 
+    @keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+  }
+   
+   .warning-text {
+    animation: flash 1s ease-in-out infinite;
+  }
 
   </style>
 </head>
 <body class="font-sans text-gray-900 bg-gray-50">
 
- <header class="fixed top-0 w-full bg-white shadow z-50">
+  <header class="fixed top-0 w-full bg-white shadow z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-yellow-500">AZ Homestay</h1>
       <nav class="space-x-5 font-medium">
@@ -104,7 +112,7 @@
 
   <section class="rules max-w-6xl mx-auto px-4">
     <h2 class=" text-center text-3xl font-bold text-yellow-500 uppercase tracking-wide mt-32 mb-12">Peraturan AZ Homestay</h2>
-    <h3 class="text-center font-semibold"><br>Untuk keselesaan bersama, sila ambil perhatian terhadap peraturan berikut.</br>Kami hargai kerjasama anda dalam menjaga keharmonian di AZ Homestay.</h3>
+     <h3 class="text-center font-semibold"><br>Untuk keselesaan bersama, sila ambil perhatian terhadap peraturan berikut.</br>Kami hargai kerjasama anda dalam menjaga keharmonian di AZ Homestay.</h3>
 
     <div class="rules-grid">
       <div class="rule-card">
@@ -151,7 +159,7 @@
 
 
     <div class="combined-box mt-16">
-      <img src="image/p1.jpg" alt="Gambar 1">
+      <img src="image/p1.jpg" alt="AZHomestay">
       <div class="combined-box-content">
         <h3 class="text-2xl font-bold text-yellow-800 mb-4">⚠️ Peringatan Khas ⚠️</h3>
         <ul class="list-disc list-inside text-sm text-gray-800 space-y-2">
@@ -167,8 +175,7 @@
     </div>
   </section>
 
-      <h2 class="text-center text-3xl font-bold text-red-900 uppercase tracking-wide mt-20 mb-12">Pihak pengurusan tidak akan bertanggungjawab ke atas 
-        <br>sebarang kehilangan harta benda dan kemalangan yang berlaku.</br></h2>
+     <p class="warning-text text-center text-red-700 font-bold text-lg mt-12 mb-12">⚠️ Pihak pengurusan tidak akan bertanggungjawab ke atas sebarang kehilangan harta benda dan kemalangan yang berlaku. ⚠</p>
  
 
   <footer class="bg-yellow-200 text-black py-6 mt-12 text-center text-sm font-semibold shadow-inner">
