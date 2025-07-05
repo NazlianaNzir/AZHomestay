@@ -17,7 +17,6 @@
 </head>
 <body class="font-sans text-gray-900 bg-gray-50">
 
-  <!-- Navbar -->
   <header class="fixed top-0 w-full bg-white shadow z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-yellow-500">AZ Homestay</h1>
@@ -34,11 +33,9 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="pt-28 pb-24 px-4 max-w-6xl mx-auto">
     <h2 class="text-4xl font-bold text-center text-yellow-500 mb-12">Ulasan Tetamu Kami</h2>
 
-    <!-- Review Cards -->
     <section id="reviewList" class="grid md:grid-cols-2 gap-8">
       <div class="bg-white rounded-2xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
         <p class="text-gray-700 italic">"Homestay sangat bersih dan selesa. Tuan rumah mesra dan membantu. Lokasi pun strategik!"</p>
@@ -73,7 +70,6 @@
       </div>
     </section>
 
-    <!-- Review Form -->
     <div class="mt-16 bg-white p-6 rounded-xl shadow-md max-w-2xl mx-auto">
       <h3 class="text-2xl font-semibold text-yellow-500 mb-4 text-center">Tinggalkan Ulasan Anda</h3>
       <form id="reviewForm" class="space-y-4">
@@ -91,12 +87,10 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="bg-white border-t border-gray-200 py-4 text-center text-sm text-gray-600">
     &copy; 2025 AZ Homestay | Made by Muhammad Fareez Ilham.
   </footer>
 
-  <!-- JavaScript -->
   <script>
     document.getElementById('reviewForm').addEventListener('submit', function(e) {
       e.preventDefault();
