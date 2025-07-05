@@ -12,6 +12,27 @@
     nav a:hover {
       color: #eab308; /* yellow-500 */
     }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hover-card:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .hover-zoom:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s ease;
+    }
   </style>
 </head>
 <body class="font-sans text-gray-900 bg-gray-50">
@@ -20,59 +41,76 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-yellow-500">AZ Homestay</h1>
       <nav class="space-x-5 font-medium">
-        <a href="index.html" target="_blank" rel="noopener noreferrer">Laman Utama</a>
-        <a href="apartment_kami.html" target="_blank" rel="noopener noreferrer" class="text-yellow-500 font-semibold">Apartment Kami</a>
-        <a href="galeri.html" target="_blank" rel="noopener noreferrer">Galeri</a>
-        <a href="tarikan_berdekatan.html" target="_blank" rel="noopener noreferrer">Tarikan Berdekatan</a>
-        <a href="hubungi.html" target="_blank" rel="noopener noreferrer">Hubungi</a>
-        <a href="peraturan.html" target="_blank" rel="noopener noreferrer">Peraturan</a>
-        <a href="soalan_lazim.html" target="_blank" rel="noopener noreferrer">Soalan Lazim</a>
-        <a href="review.html" target="_blank" rel="noopener noreferrer">Review</a>
+        <a href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+        <a href="apartment_kami.html" target="_blank" rel="noopener noreferrer" class="text-yellow-500 font-semibold">Our Apartment</a>
+        <a href="galeri.html" target="_blank" rel="noopener noreferrer">Galerry</a>
+        <a href="tarikan_berdekatan.html" target="_blank" rel="noopener noreferrer">Nearby Attractions</a>
+        <a href="hubungi.html" target="_blank" rel="noopener noreferrer">Contacts</a>
+        <a href="peraturan.html" target="_blank" rel="noopener noreferrer">Rules</a>
+        <a href="soalan_lazim.html" target="_blank" rel="noopener noreferrer">FAQs</a>
+        <a href="review.html" target="_blank" rel="noopener noreferrer">Reviews</a>
       </nav>
     </div>
   </header>
 
   <main class="pt-28 pb-20 px-4 max-w-6xl mx-auto">
-  <h2 class="text-4xl font-bold text-center text-yellow-500 mb-16">Our Apartments</h2>
+    <h2 class="text-5xl font-bold text-center text-yellow-500 mb-16">Our Apartments</h2>
 
-  <section class="bg-gradient-to-r from-yellow-100 via-yellow-50 to-white rounded-2xl shadow-lg p-8 mb-16">
-    <div class="grid md:grid-cols-2 gap-6 items-center">
-      <div>
-        <h3 class="text-3xl font-semibold text-yellow-600 mb-4">🏡 AZH KIARA D'RIVA</h3>
-        <p class="mb-4 text-gray-700"><strong>📍 Location:</strong> Kota Bharu City</p>
-        <h4 class="text-xl font-medium mb-2 text-yellow-700">Facilities</h4>
-        <ul class="list-disc list-inside text-gray-800 space-y-1">
-          <li>3 Bedrooms + 2 Bathrooms</li>
-          <li>TV & Internet</li>
-          <li>Fully equipped Living Room & Kitchen</li>
-          <li>Air-conditioning in every room</li>
-          <li>Covered parking space</li>
-          <li>Swimming pool for adults and children</li>
-        </ul>
+    <section class="bg-gradient-to-r from-yellow-100 via-yellow-50 to-white rounded-2xl shadow-lg p-8 mb-16 hover-card fade-up">
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <div>
+          <h3 class="text-3xl font-semibold text-yellow-600 mb-4">🏡 AZH KIARA D'RIVA</h3>
+          <p class="mb-4 text-gray-700"><strong>📍 Location:</strong> Kota Bharu City</p>
+          <h4 class="text-xl font-medium mb-2 text-yellow-700">Facilities</h4>
+          <ul class="list-disc list-inside text-gray-800 space-y-1">
+            <li>3 Bedrooms + 2 Bathrooms</li>
+            <li>TV & Internet</li>
+            <li>Fully equipped Living Room & Kitchen</li>
+            <li>Air-conditioning in every room</li>
+            <li>Covered parking space</li>
+            <li>Swimming pool for adults and children</li>
+          </ul>
+        </div>
+        <img src="image/ak.jpg" alt="AZH Kiara Apartment" class="rounded-xl shadow-md hover-zoom">
       </div>
-      <img src="image/ak.jpg" alt="AZH Kiara Apartment" class="rounded-xl shadow-md">
-    </div>
-  </section>
+    </section>
 
-  <section class="bg-white border border-yellow-100 rounded-2xl shadow-md p-8">
-    <div class="grid md:grid-cols-2 gap-6 items-center">
-      <img src="image/ak2.jpg" alt="AZH Studio" class="rounded-xl shadow-md">
-      <div>
-        <h3 class="text-3xl font-semibold text-yellow-600 mb-4">🏠 AZH STUDIO KBCP</h3>
-        <p class="mb-4 text-gray-700"><strong>📍 Location:</strong> Kota Bharu City</p>
-        <h4 class="text-xl font-medium mb-2 text-yellow-700">Facilities</h4>
-        <ul class="list-disc list-inside text-gray-800 space-y-1">
-          <li>1 Queen Bed</li>
-          <li>Work desk & TV</li>
-          <li>Air-conditioning & Fan</li>
-          <li>Refrigerator & Electric Kettle</li>
-          <li>Free parking</li>
-        </ul>
+    <section class="bg-white border border-yellow-100 rounded-2xl shadow-md p-8 hover-card fade-up">
+      <div class="grid md:grid-cols-2 gap-6 items-center">
+        <img src="image/ak2.jpg" alt="AZH Studio" class="rounded-xl shadow-md hover-zoom">
+        <div>
+          <h3 class="text-3xl font-semibold text-yellow-600 mb-4">🏠 AZH STUDIO KBCP</h3>
+          <p class="mb-4 text-gray-700"><strong>📍 Location:</strong> Kota Bharu City</p>
+          <h4 class="text-xl font-medium mb-2 text-yellow-700">Facilities</h4>
+          <ul class="list-disc list-inside text-gray-800 space-y-1">
+            <li>1 Queen Bed</li>
+            <li>Work desk & TV</li>
+            <li>Air-conditioning & Fan</li>
+            <li>Refrigerator & Electric Kettle</li>
+            <li>Free parking</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer class="bg-gray-100 py-4 text-center text-sm text-gray-600">
-  &copy; 2025. Made by Muhammad Fareez Ilham.
-</footer>
+  <footer class="bg-gray-100 py-4 text-center text-sm text-gray-600">
+    &copy; 2025 AZ Homestay | Made by Muhammad Fareez Ilham.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
